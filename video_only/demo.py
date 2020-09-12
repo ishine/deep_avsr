@@ -1,7 +1,7 @@
 """
 Author: Smeet Shah
 File part of 'deep_avsr' GitHub repository available at -
-https://github.com/LordMartian/deep_avsr
+https://github.com/lordmartian/deep_avsr
 
 Specifications:
 --------------
@@ -12,12 +12,12 @@ Properties - Video:
              Audio:
              Mono audio, 16000 Hz sample rate
 
-Note - 
+Note -
 Video length should be such that the expected transcription length is less than 100 characters.
 For this, a long video can be appropriately segmented into clips of appropriate length
 depending on the speaking rate of the speaker. For a speaker with around 160 words per min,
 and considering 6 characters per word (including space) on average, clip lengths should be
-around 6 secs. 
+around 6 secs.
 The predicted transcriptions will have all characters in capital with no punctuations
 other than an apostrophe (').
 """

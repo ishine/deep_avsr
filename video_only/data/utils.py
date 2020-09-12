@@ -1,7 +1,7 @@
 """
 Author: Smeet Shah
 File part of 'deep_avsr' GitHub repository available at -
-https://github.com/LordMartian/deep_avsr
+https://github.com/lordmartian/deep_avsr
 """
 
 import torch
@@ -134,17 +134,17 @@ def collate_fn(dataBatch):
     Collate function definition used in Dataloaders.
     """
     inputBatch = pad_sequence([data[0] for data in dataBatch])
-    if None not in [data[1] for data in dataBatch]:
+    if not any(data[1] is None for data in dataBatch):
         targetBatch = torch.cat([data[1] for data in dataBatch])
     else:
         targetBatch = None
-    
+
     inputLenBatch = torch.stack([data[2] for data in dataBatch])
-    if None not in [data[3] for data in dataBatch]:
+    if not any(data[3] is None for data in dataBatch):
         targetLenBatch = torch.stack([data[3] for data in dataBatch])
     else:
         targetLenBatch = None
-    
+
     return inputBatch, targetBatch, inputLenBatch, targetLenBatch
 
 

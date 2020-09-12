@@ -1,7 +1,7 @@
 """
 Author: Smeet Shah
 File part of 'deep_avsr' GitHub repository available at -
-https://github.com/LordMartian/deep_avsr
+https://github.com/lordmartian/deep_avsr
 """
 
 import os
